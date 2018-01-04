@@ -1,0 +1,1 @@
+INSERT INTO `dede_flink` VALUES('10','1','http://www.xunmoban.com','织梦模板','','','','1473320134','1','2');

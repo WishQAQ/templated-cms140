@@ -1,0 +1,16 @@
+<div class="header">
+  <div class="logo"> <a href="/"><img src="{dede:global.cfg_templets_skin/}/images/logo.png"></a> </div>
+  <div class="nav">
+    <div class="nav-icon"></div>
+    <div class="nav-bg"></div>
+    <ul>
+      <li {dede:field name=typeid runphp="yes"}(@me=="")? @me=" class='on' ":@me="";{/dede:field}><a href="/" target="_self">欢迎</a> </li>
+      {dede:channel type='top' currentstyle="
+      <li class='on'><a href='~typelink~' class='thisclass'>~typename~</a></li>
+      "}
+      <li><a href="[field:typeurl/]" target="_self">[field:typename/]</a></li>
+      {/dede:channel}
+    </ul>
+    <div class="home-info"></div>
+  </div>
+</div>

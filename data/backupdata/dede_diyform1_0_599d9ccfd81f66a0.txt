@@ -1,0 +1,1 @@
+INSERT INTO `dede_diyform1` VALUES('12','0','dedesos.com','admin@dedesos.com','dedesos.com','dedesos.com');

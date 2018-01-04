@@ -1,0 +1,86 @@
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{dede:field.seotitle /}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/style-light.css">
+<style type="text/css">
+/*---------背景色---------*/
+
+.header {
+	background-color: #fff;
+}
+/*---------高两色---------*/
+.nav-bg, .slider .btn-prev:hover, .slider .btn-next:hover, .banner-text span a, .pic-box:hover p, .btn-back:hover, .btn-prev2:hover, .btn-next2:hover, .sub-nav .sub-on a, .sub-nav li a:hover, .formBtn button:hover, .nav li a:after, .nav .on a:after {
+	background-color: #a6cc00;
+}
+.news-list-info:hover h4, .news-more a:hover {
+	color: #a6cc00;
+}
+.news-more a:hover, .form input:focus, .form textarea:focus {
+	border-color: #a6cc00;
+}
+body {
+	background-image: url(../../templets/default/css/bg.jpg);
+}
+.lc2 {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="content">
+<!--  RIGHT CONTENT  -->
+
+<div class="img-and-text">
+  <div class="sub-nav">
+    <h3>{dede:field name='typename' /}</h3>
+    <ul>
+    </ul>
+  </div>
+  <div class="banner-img"  > {dede:field.content/} </div>
+  <div style="clear:both"></div>
+  <div class="form">
+    <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+    <input type="hidden" name="action" value="post" />
+    <input type="hidden" name="diyid" value="1" />
+    <input type="hidden" name="do" value="2" />
+    <form id="myform">
+      <dl>
+        <dt>您的称呼<small>(必填)</small></dt>
+        <dd>
+          <input type='text' name='lylxr' id='lylxr'   class='formText' value='' />
+        </dd>
+      </dl>
+      <dl>
+        <dt>您的邮箱<small>(必填)</small></dt>
+        <dd>
+          <input type='text' name='luyx' id='luyx'  class='intxt' value='' />
+        </dd>
+      </dl>
+      <dl>
+        <dt>联系电话</dt>
+        <dd>
+          <input type='text' name='lydh' id='lydh'   class='formText' value='' />
+        </dd>
+      </dl>
+      <dl>
+        <dt>您的想法/意见<small>(必填)</small></dt>
+        <dd>
+          <textarea name='lyyj' id='lyyj'  class="formText"></textarea>
+        </dd>
+      </dl>
+      <input type="hidden" name="dede_fields" value="lylxr,text;luyx,text;lydh,text;lyyj,multitext" />
+      <input type="hidden" name="dede_fieldshash" value="98f391c8e1cf0fb1c08be7ea6c0ef4f9" />
+      <div class="formBtn">
+        <button id="sendbtn" type="submit" name="submit">发送留言</button>
+      </div>
+    </form>
+  </div>
+</div>
+{dede:include filename="foot.htm"/}
+</body>
+</html>

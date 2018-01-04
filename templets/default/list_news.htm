@@ -1,0 +1,62 @@
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{dede:field.seotitle /}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/style-light.css">
+<style type="text/css">
+/*---------背景色---------*/
+
+.header {
+	background-color: #fff;
+}
+/*---------高两色---------*/
+.nav-bg, .slider .btn-prev:hover, .slider .btn-next:hover, .banner-text span a, .pic-box:hover p, .btn-back:hover, .btn-prev2:hover, .btn-next2:hover, .sub-nav .sub-on a, .sub-nav li a:hover, .formBtn button:hover, .nav li a:after, .nav .on a:after {
+	background-color: #a6cc00;
+}
+.news-list-info:hover h4, .news-more a:hover {
+	color: #a6cc00;
+}
+.news-more a:hover, .form input:focus, .form textarea:focus {
+	border-color: #a6cc00;
+}
+body {
+	background-image: url(../../templets/default/css/bg.jpg);
+}
+</style>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="content">
+<!--  -->
+
+<div class="big-title">
+  <h3>{dede:field name='typename' /}</h3>
+  <ul>
+  </ul>
+</div>
+<div class="news-list"> {dede:list pagesize='8'  titlelen='60'}
+  <div class="news-box"> <a href="[field:arcurl/]">
+    <div class="news-list-img"><img src="[field:litpic/]"></div>
+    </a>
+    <div class="news-list-info">
+      <div class="news-list-title"> <a href="[field:arcurl/]">
+        <h4>[field:title/]</h4>
+        </a>
+        <p>[field:description function="cn_substr(@me,255)"/]… </p>
+        <div class="news-more"><a href="[field:arcurl/]">继续阅读</a></div>
+      </div>
+    </div>
+  </div>
+  {/dede:list} </div>
+<div>
+  <ul class="page">
+    <li class="page_on">{dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/} </li>
+  </ul>
+</div>
+{dede:include filename="foot.htm"/}
+</body>
+</html>

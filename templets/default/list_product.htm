@@ -1,0 +1,59 @@
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{dede:field.seotitle /}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/style-light.css">
+<style type="text/css">
+/*---------背景色---------*/
+
+.header {
+	background-color: #fff;
+}
+/*---------高两色---------*/
+.nav-bg, .slider .btn-prev:hover, .slider .btn-next:hover, .banner-text span a, .pic-box:hover p, .btn-back:hover, .btn-prev2:hover, .btn-next2:hover, .sub-nav .sub-on a, .sub-nav li a:hover, .formBtn button:hover, .nav li a:after, .nav .on a:after {
+	background-color: #a6cc00;
+}
+.news-list-info:hover h4, .news-more a:hover {
+	color: #a6cc00;
+}
+.news-more a:hover, .form input:focus, .form textarea:focus {
+	border-color: #a6cc00;
+}
+body {
+	background-image: url(../../templets/default/css/bg.jpg);
+}
+</style>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="content">
+<!--  PORTFOLIO  --> 
+<!--  -->
+<div class="gallery-list">
+  <div class="sub-nav">
+    <h3>{dede:field name='typename' /}</h3>
+    <ul>
+      {dede:channel type='son' noself='yes'}
+      <li class="sub-on"><a href="[field:typelink/]">[field:typename/]</a></li>
+      {/dede:channel}
+    </ul>
+  </div>
+  <div class="gallery"> {dede:list pagesize='8'  titlelen='60'} <a href="[field:arcurl/]">
+    <div class="pic-box"> <img src="[field:litpic/]" width="285" height="190">
+      <div class="box-over"></div>
+      <p>[field:title/]</p>
+    </div>
+    </a> {/dede:list} </div>
+  <div>
+    <ul class="page">
+      <li class="page_on">{dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/} </li>
+    </ul>
+  </div>
+</div>
+{dede:include filename="foot.htm"/}
+</body>
+</html>
